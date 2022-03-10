@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>FoodBox</title>
+
+    <style>
+      body {
+        background: lightgrey;
+      }
+      .topo {
+        background: black;
+        color: white;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: #bbbbbb
+      }
+      .produto {
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        box-shadow: 0 0 10px 0 #bbbbbb;
+        cursor: pointer;
+        border: 5px solid white;
+      }
+
+      h1 {
+        margin: 0;
+        font-family: "Righteous";
+        font-weight: normal;
+
+      }
+      h2 {
+        margin: 0;
+        font-size: 18px;
+      }
+      h3 {
+        font-size: 30px;
+        margin-bottom: 5px;
+      }
+      h4 {
+        margin-top: 0;
+        margin-bottom: 5px;
+        font-size: 20px;
+      }
+      img {
+        width: 130px;
+        border-radius: 5px;
+        float: right;
+      }
+
+      .botao { background: black;
+text-align: center;
+padding: 15px;
+margin-top: 50px;
+margin-bottom: 100px;
+border-radius: 50px;
+color: white;
+font-weight: bold;
+font-size: 18px;
+cursor: pointer;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="topo">
+      <h1>FoodBox</h1>
+      <h2>Monte seu box e receba em 15 minutos!</h2>
+    </div>
+
+    <h3>Primeiro, seu prato</h3>
+    <div id= "frango" class="produto" onclick="escolherFrango()">
+      <img src="https://superbom.com.br/panel/wp-content/uploads/2019/05/d7fb6637-admin-ajax-31-400x225.jpg"
+      />
+      <h4>Frango Yin-Yang</h4>
+      <p>Um pouco de batata, um pouco de salada</p>
+      <p><strong>R$ 19,90</strong></p>
+    </div>
+
+    <div id= "temaki" class="produto" onclick="escolherTemaki()">
+      <img
+        src="https://img.cybercook.com.br/imagens/receitas/590/temaki-california.jpg"
+      />
+      <h4>Temaki california</h4>
+      <p>Gostinho das praias californianas</p>
+      <p><strong>R$ 17,90</strong></p>
+    </div>
+    <div id= "hotroll" class="produto" onclick="escolherHotRoll()">
+      <img
+        src="https://cozinhaemcena.com.br/wp-content/uploads/2016/10/hot-roll-veggie-capa.jpg"
+      />
+      <h4>Hot roll</h4>
+      <p>Cuidado que tá quente!</p>
+      <p><strong>R$ 20,90</strong></p>
+    </div>
+    <div id= "yakisoba" class="produto" onclick="escolherYakisoba()">
+      <img
+        src="https://institucional.hortifruti.com.br/wp-content/uploads/2021/06/Banner-Yakisoba-vegetariano.jpg"
+      />
+      <h4>Yakisoba</h4>
+      <p>Delicinha demais!</p>
+      <p><strong>R$ 22,90</strong></p>
+    </div>
+    <div id="springroll" class="produto" onclick="escolherSpringRoll()">
+      <img
+        src="https://www.thespruceeats.com/thmb/8qGPT8JKwtiGS_XLbbYVODckJ7k=/450x0/filters:no_upscale():max_bytes(150000):strip_icc()/fresh-spring-rolls-174751621-5ac82923a18d9e00379ccc96.jpg"
+      />
+      <h4>Spring Roll</h4>
+      <p>Lindo e gostoso como a primavera</p>
+      <p><strong>R$ 16,90</strong></p>
+    </div>
+    <h4>Agora sua bebida</h4>
+    <div id="coca" class="produto" onclick="escolherCoca()">
+      <img
+        src="https://storage.googleapis.com/facily-images/9f0792e9-coca-cola-lata-350ml-unidades-1623258054.jpg"
+      />
+      <h4>Coca Cola lata</h4>
+      <p>Coquinha Gelada</p>
+      <p><strong>R$ 5,00</strong></p>
+    </div>
+
+    <div id="pepsi" class="produto" onclick="escolherPepsi()">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTJAz1pFQnY2gQV8S8XaAWhpoNlCVzfnRLzA&usqp=CAU"/>
+      <h4>Pepsi</h4>
+      <p>Melhor que coca</p>
+      <p><strong>R$ 5,00</strong></p>
+    </div>
+
+    <div id="suco" class="produto" onclick="escolherSuco()">
+        <img src="https://cptstatic.s3.amazonaws.com/imagens/enviadas/materias/materia19920/beneficios-dos-sucos-naturais-1-alfa-hotel.jpg"/>
+        <h4>Suco</h4>
+        <p>Bem saudável</p>
+        <p><strong>R$ 5,00</strong></p>
+      </div>
+
+    
+
+
+    <h4>Finalmente a sobremesa!</h4>
+    <div id="sorvete" class="produto" onclick="escolherSorveteFrito()">
+      <img
+        src="https://img.itdg.com.br/tdg/images/blog/uploads/2017/08/shutterstock_437685760-1-300x200.jpg"
+      />
+      <h4>Sorvete Frito</h4>
+      <p>Contraditório...</p>
+      <p><strong>R$ 10,90</strong></p>
+    </div>
+
+<div id="pudim" class="produto" onclick="escolherPudim()">
+  <img src="https://rcnews.com.br/portal/wp-content/uploads/2019/12/pudim.jpg"/>
+<h4>Pudim</h4>
+<p>pudinzinho!</p>
+<p><strong>R$ 10,90</strong></p>
+</div>
+
+    <div class="botao" onclick="finalizarPedido()">
+      Finalizar Pedido
+    </div>
+
+    <script>
+      let prato;
+      let bebida;
+      let sobremesa;
+
+     function escolherFrango() {
+      document.getElementById("frango").style.borderColor = "black";
+      document.getElementById("temaki").style.borderColor = "white";
+      document.getElementById("hotroll").style.borderColor = "white";
+      document.getElementById("yakisoba").style.borderColor = "white";
+      document.getElementById("springroll").style.borderColor = "white";
+      document.getElementById("coca").style.borderColor = "white";
+      document.getElementById("sorvete").style.borderColor = "white";
+    prato= "frango"
+    }
+             function escolherTemaki(){
+      document.getElementById("temaki").style.borderColor = "black";
+      document.getElementById("frango").style.borderColor = "white";
+      document.getElementById("hotroll").style.borderColor = "white";
+      document.getElementById("yakisoba").style.borderColor = "white";
+      document.getElementById("springroll").style.borderColor = "white";
+      document.getElementById("coca").style.borderColor = "white";
+      document.getElementById("sorvete").style.borderColor = "white";
+      prato= "temaki"
+    }
+    function escolherHotRoll() {
+      document.getElementById("hotroll").style.borderColor = "black";
+      document.getElementById("frango").style.borderColor = "white";
+      document.getElementById("temaki").style.borderColor = "white";
+      document.getElementById("yakisoba").style.borderColor = "white";
+      document.getElementById("springroll").style.borderColor = "white";
+      document.getElementById("coca").style.borderColor = "white";
+      document.getElementById("sorvete").style.borderColor = "white";
+      prato="hotroll"
+    }
+    function escolherYakisoba () {
+      document.getElementById("yakisoba").style.borderColor = "black";
+      document.getElementById("frango").style.borderColor = "white";
+      document.getElementById("temaki").style.borderColor = "white";
+      document.getElementById("hotroll").style.borderColor = "white";
+      document.getElementById("springroll").style.borderColor = "white";
+      document.getElementById("coca").style.borderColor = "white";
+      document.getElementById("sorvete").style.borderColor = "white";
+      prato= "yakisoba"
+      
+    }
+    function escolherSpringRoll () {
+      document.getElementById("springroll").style.borderColor = "black";
+      document.getElementById("frango").style.borderColor = "white";
+      document.getElementById("temaki").style.borderColor = "white";
+      document.getElementById("hotroll").style.borderColor = "white";
+      document.getElementById("yakisoba").style.borderColor = "white";
+      document.getElementById("coca").style.borderColor = "white";
+      document.getElementById("sorvete").style.borderColor = "white";
+prato= "springroll"
+    }
+    function escolherCoca () {
+      document.getElementById("coca").style.borderColor = "black";
+      document.getElementById("pepsi").style.borderColor = "white";
+      document.getElementById("suco").style.borderColor = "white";
+    bebida= "coca"
+    }
+    function escolherPepsi () {
+      document.getElementById("pepsi").style.borderColor = "black";
+      document.getElementById("coca").style.borderColor = "white";
+      document.getElementById("suco").style.borderColor = "white";
+      bebida= "pepsi"
+    }
+    function escolherSuco () {
+      document.getElementById("suco").style.borderColor = "black";
+      document.getElementById("coca").style.borderColor = "white";
+      document.getElementById("pepsi").style.borderColor = "white";
+      bebida="suco"
+    }
+function escolherSorveteFrito () {
+  document.getElementById("sorvete").style.borderColor = "black";
+  document.getElementById("pudim").style.borderColor = "white";
+  
+sobremesa="sorvete"
+}
+function escolherPudim () {
+  document.getElementById("pudim").style.borderColor = "black";
+  document.getElementById("sorvete").style.borderColor = "white";
+  sobremesa="pudim"
+}
+
+function finalizarPedido (){
+  let mensagem; 
+
+  mensagem= ( "Olá eu gostaria de pedir um combo: " + prato + ", " + bebida + " e " + sobremesa); 
+ 
+window.open("https://wa.me/+5518981240624?text=" + mensagem);
+}
+
+    </script>
+  </style>
+  </body>
+</html>
